@@ -1,0 +1,39 @@
+//create a class Shape with ttributes x,y and init, and 2 functions area, circumference both return double
+//then create 3 subclasses Circle, Rectangle and Square
+//Each one of them inherits the Shape class 
+
+//create a protocol Shape
+protocol Shape {
+ /* var x:Int {get set}
+  var y:Int {get set}
+  init(x:Int, y:Int) */
+  func area() ->Double
+  func circumference() ->Double
+}
+class Circle: Shape {
+  var x:Int
+  var y:Int 
+  var radius:Int
+  required init(x:Int, y:Int, radius:Int)
+  {
+    self.x = x
+    self.y = y
+    self.radius = radius
+  }
+  func area() ->Double
+  {
+    return Double(self.radius) * Double(self.radius) * Double.pi
+  }
+  func circumference() ->Double
+  {
+    return 2.0 * Double(self.radius) * Double.pi
+  }
+}
+//create the Rectangle class
+
+//create the Square class
+
+var c = Circle(x:10,y:10,radius:15)
+print(c.area())
+//create Rectangle object and print its area
+//create Square object and print its area
